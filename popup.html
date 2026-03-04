@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; width: 340px; margin: 12px; }
+      textarea { width: 100%; height: 140px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+      button { width: 100%; padding: 10px; margin-top: 8px; cursor: pointer; }
+      .row { display:flex; gap: 8px; align-items:center; margin-top: 8px; }
+      .row > * { flex: 1; }
+      label { font-size: 12px; color: #333; }
+      input[type="file"] { width: 100%; }
+      small { color: #555; display:block; margin-top: 8px; line-height: 1.25; }
+      .status { margin-top: 8px; font-size: 12px; color: #0a0; min-height: 16px; }
+    </style>
+  </head>
+  <body>
+    <h3>Ralphs Grocery Runner</h3>
+
+    <label>
+      Upload a .txt file (one item per line):
+      <input id="file" type="file" accept=".txt,text/plain" />
+    </label>
+
+    <div class="row">
+      <button id="download">Download current list</button>
+      <button id="clear">Clear list</button>
+    </div>
+
+    <label style="display:block; margin-top: 10px;">Current list (editable):</label>
+    <textarea id="list" placeholder="One item per line..."></textarea>
+
+    <button id="save">Save list</button>
+    <button id="toggle">Toggle panel on Ralphs</button>
+
+    <div class="status" id="status"></div>
+
+    <small>
+      Tip: keep items “search-friendly” (e.g., “black beans 15 oz can”, “corn tortillas 10 ct”).
+    </small>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

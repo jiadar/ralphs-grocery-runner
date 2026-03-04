@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Ralphs Grocery Runner",
+  "version": "1.0.0",
+  "description": "Helps you add a recipe grocery list to Ralphs quickly (manual add-to-cart).",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["https://www.ralphs.com/*"],
+  "action": {
+    "default_title": "Ralphs Grocery Runner",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.ralphs.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ]
+}
