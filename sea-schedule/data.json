@@ -1,0 +1,180 @@
+{
+  "_meta": {
+    "title": "Southeast Asia 2026 Master Travel Schedule",
+    "version": "8.0",
+    "lastUpdated": "2026-03-18",
+    "dateRange": "May 8 - Jun 19, 2026",
+    "travelers": 4,
+    "bjjSessions": 11,
+    "destinations": ["Philippines (Naic, Manila, Bohol, El Nido)", "Shanghai", "Osaka (Cody solo)"]
+  },
+  "people": {
+    "javin": {
+      "name": "Javin",
+      "home": "San Diego",
+      "philippinesBase": "Naic, Cavite (family house)",
+      "hasBjj": true,
+      "hasJetlagProtocol": true,
+      "hasMeetings": true,
+      "meetingDays": ["Tue", "Thu"],
+      "meetingTimePDT": "7:00-9:00am",
+      "meetingTimePHT": "10:00pm-midnight",
+      "meetingTimeCST": "10:00pm-midnight",
+      "sleepHoursRequired": 9,
+      "sleepAfterMeeting": "5 minutes"
+    },
+    "jhoed": {
+      "name": "Jhoed",
+      "home": "San Diego",
+      "hasBjj": false,
+      "departsTrip": "May 26",
+      "departsFlight": "JL0746+JL0066 MNL->NRT->SAN",
+      "mustLeaveHotel": "6:15am May 26"
+    },
+    "nick": {
+      "name": "Nick",
+      "home": "San Francisco",
+      "hasBjj": true,
+      "bjjNote": "Does ALL 11 sessions with Javin",
+      "zambiaRequired": true,
+      "zambiaDays": 7,
+      "zambiaRange": "Jun 11-17",
+      "mustBeInSFOBy": "Jun 19"
+    },
+    "cody": {
+      "name": "Cody",
+      "home": "San Francisco",
+      "hasBjj": false,
+      "twoWeekLimit": true,
+      "twoWeekStart": "May 31 (depart SFO)",
+      "twoWeekEnd": "Jun 13-14 (return SFO)",
+      "goesToOsaka": true
+    }
+  },
+  "flights": [
+    {"date": "May 13", "route": "LAX->MNL", "flight": "PR 113", "airline": "Philippine Airlines", "depart": "12:25pm", "arrive": "6:00pm+1", "duration": "14hr 35min", "who": ["javin", "jhoed"]},
+    {"date": "May 13", "route": "SFO->MNL", "flight": "TBD", "airline": "TBD", "depart": "TBD", "arrive": "TBD", "duration": "TBD", "who": ["nick"]},
+    {"date": "May 18", "route": "MNL->TAG", "flight": "Z2 358", "airline": "Zest Air", "depart": "2:10pm", "arrive": "3:30pm", "duration": "1hr 20min", "who": ["javin", "jhoed", "nick"]},
+    {"date": "May 21", "route": "TAG->ENI", "flight": "5J 5611", "airline": "Cebu Pacific", "depart": "3:40pm", "arrive": "5:25pm", "duration": "1hr 45min", "who": ["javin", "jhoed", "nick"]},
+    {"date": "May 24", "route": "ENI->MPH->MNL", "flight": "T65410+PR2044", "airline": "AirSwift + PAL Express", "depart": "2:25pm", "arrive": "6:55pm", "duration": "4hr 30min", "legs": [
+      {"flight": "T65410", "airline": "AirSwift", "from": "ENI", "to": "MPH (Caticlan/Boracay)", "depart": "2:25pm", "arrive": "3:30pm", "duration": "1hr 05min"},
+      {"connect": "2hr 15min at MPH"},
+      {"flight": "PR2044", "airline": "PAL Express", "from": "MPH", "to": "MNL", "depart": "5:45pm", "arrive": "6:55pm", "duration": "1hr 10min"}
+    ], "who": ["javin", "jhoed", "nick"]},
+    {"date": "May 26", "route": "MNL->NRT->SAN", "flight": "JL0746+JL0066", "airline": "JAL", "depart": "10:05am", "arrive": "11:05am same day", "duration": "14hr 15min", "legs": [
+      {"flight": "JL0746", "from": "MNL", "to": "NRT", "depart": "10:05am", "arrive": "3:30pm", "duration": "4hr 25min"},
+      {"connect": "1hr 45min at NRT"},
+      {"flight": "JL0066", "from": "NRT", "to": "SAN", "depart": "5:15pm", "arrive": "11:05am", "duration": "9hr 50min"}
+    ], "who": ["jhoed"]},
+    {"date": "May 31", "route": "SFO->PVG", "flight": "CA7210", "airline": "Air China (operated by United)", "depart": "1:30pm", "arrive": "5:25pm+1", "duration": "12hr 55min", "who": ["cody"]},
+    {"date": "Jun 1", "route": "MNL->PVG", "flight": "PR 336", "airline": "Philippine Airlines", "depart": "10:50am", "arrive": "2:30pm", "duration": "3hr 40min", "who": ["javin", "nick"]},
+    {"date": "Jun 10", "route": "PVG->YVR->SAN", "flight": "AC26+AC8766", "airline": "Air Canada", "depart": "3:55pm", "arrive": "4:15pm same day", "duration": "15hr 20min", "legs": [
+      {"flight": "AC26", "from": "PVG", "to": "YVR", "depart": "3:55pm", "arrive": "11:20am", "duration": "10hr 25min"},
+      {"connect": "1hr 55min at YVR"},
+      {"flight": "AC8766", "from": "YVR", "to": "SAN", "depart": "1:15pm", "arrive": "4:15pm", "duration": "3hr"}
+    ], "who": ["javin"]},
+    {"date": "Jun 10", "route": "PVG->KIX", "flight": "9C6581", "airline": "Spring Airlines", "depart": "3:10pm", "arrive": "6:30pm", "duration": "2hr 20min", "who": ["cody"]},
+    {"date": "Jun 11", "route": "PVG->ADD->LUN", "flight": "ET685+ET863", "airline": "Ethiopian Airlines", "depart": "12:20am", "arrive": "1:10pm", "duration": "18hr 50min", "legs": [
+      {"flight": "ET685", "from": "PVG", "to": "ADD (Addis Ababa)", "depart": "12:20am", "arrive": "6:35am", "duration": "11hr 15min"},
+      {"connect": "3hr 30min at ADD"},
+      {"flight": "ET863", "from": "ADD", "to": "LUN (Lusaka)", "depart": "10:05am", "arrive": "1:10pm", "duration": "4hr 05min"}
+    ], "who": ["nick"]},
+    {"date": "Jun 18", "route": "LUN->DXB->SFO", "flight": "EK714+EK225", "airline": "Emirates", "depart": "9:35pm", "arrive": "2:00pm+1", "duration": "25hr 25min", "legs": [
+      {"flight": "EK714", "from": "LUN", "to": "DXB (Dubai)", "depart": "9:35pm", "arrive": "6:30am+1", "duration": "6hr 55min"},
+      {"connect": "2hr 40min at DXB"},
+      {"flight": "EK225", "from": "DXB", "to": "SFO", "depart": "9:10am", "arrive": "2:00pm", "duration": "15hr 50min"}
+    ], "who": ["nick"]}
+  ],
+  "bjjSessions": [
+    {"n": 1, "date": "May 16", "dow": "Sat", "gym": "Comp Training", "location": "Imus", "time": "1:00-3:00pm", "count": "1/4", "who": ["javin", "nick"], "travelFrom": "Naic", "travelTime": {"bus": "2.5hrs", "drive": "1.5hrs", "scooter": "1hr"}, "postClass": "1hr shower+chat", "earlyArrival": "none (starts 15 min late)"},
+    {"n": 2, "date": "May 18", "dow": "Mon", "gym": "Bohol BJJ", "location": "Bohol", "time": "6:30-8:30pm", "count": "Bohol 1/2", "who": ["javin", "nick"], "travelFrom": "Panglao town", "travelTime": {"bus": "1.5hrs", "car": "45min"}, "postClass": "45min chit chat", "earlyArrival": "none (first night, starts late)"},
+    {"n": 3, "date": "May 20", "dow": "Wed", "gym": "Bohol BJJ", "location": "Bohol", "time": "6:30-8:30pm", "count": "Bohol 2/2", "who": ["javin", "nick"], "travelFrom": "Panglao town", "travelTime": {"bus": "1.5hrs", "car": "45min"}, "postClass": "45min chit chat", "earlyArrival": "15 min"},
+    {"n": 4, "date": "May 21", "dow": "Thu", "gym": "Madness MMA", "location": "El Nido", "time": "6:30-7:30pm", "who": ["javin", "nick"], "travelFrom": "El Nido accommodation", "travelTime": {"default": "30min"}, "postClass": "30min shower", "sessionLength": "1hr"},
+    {"n": 5, "date": "May 22", "dow": "Fri", "gym": "Madness MMA", "location": "El Nido", "time": "5:00-6:00pm", "who": ["javin", "nick"], "travelFrom": "El Nido accommodation", "travelTime": {"default": "30min"}, "postClass": "30min shower", "sessionLength": "1hr"},
+    {"n": 6, "date": "May 25", "dow": "Mon", "gym": "Motion", "location": "Manila (15 min walk from BGC)", "time": "7:00-9:00pm", "who": ["javin", "nick"], "travelFrom": "BGC", "travelTime": {"walk": "15min"}, "postClass": "15min buffer"},
+    {"n": 7, "date": "May 26", "dow": "Tue", "gym": "KMA", "location": "Makati", "time": "12:00-2:00pm", "who": ["javin", "nick"], "travelFrom": "MNL hotel", "travelTime": {"default": "30min"}, "postClass": "45min shower+buffer"},
+    {"n": 8, "date": "May 27", "dow": "Wed", "gym": "Comp Training", "location": "Imus", "time": "1:00-3:00pm", "count": "2/4", "who": ["javin", "nick"], "travelFrom": "Naic", "travelTime": {"bus": "2.5hrs", "drive": "1.5hrs", "scooter": "1hr"}, "postClass": "1hr shower+chat", "earlyArrival": "none"},
+    {"n": 9, "date": "May 28", "dow": "Thu", "gym": "Comp Training", "location": "Imus", "time": "1:00-3:00pm", "count": "3/4", "who": ["javin", "nick"], "travelFrom": "Naic", "travelTime": {"bus": "2.5hrs", "drive": "1.5hrs", "scooter": "1hr"}, "postClass": "1hr shower+chat", "earlyArrival": "none"},
+    {"n": 10, "date": "May 29", "dow": "Fri", "gym": "Cavite City", "location": "Cavite City", "time": "5:30-9:00pm", "who": ["javin", "nick"], "travelFrom": "Naic", "travelTime": {"bus": "2.5hrs (1.5hrs late night return)", "drive": "1.5hrs", "scooter": "1hr"}, "postClass": "45min shower+chat", "earlyArrival": "15 min"},
+    {"n": 11, "date": "May 30", "dow": "Sat", "gym": "Comp Training", "location": "Imus", "time": "1:00-3:00pm", "count": "4/4", "who": ["javin", "nick"], "travelFrom": "Naic", "travelTime": {"bus": "2.5hrs", "drive": "1.5hrs", "scooter": "1hr"}, "postClass": "1hr shower+chat", "earlyArrival": "none"}
+  ],
+  "bjjConstraints": {
+    "compTrainingSat1x": {"met": true, "sessions": ["May 16"]},
+    "compTrainingMonThu1x": {"met": true, "sessions": ["May 27", "May 28"]},
+    "boholBjj2x": {"met": true, "sessions": ["May 18", "May 20"]},
+    "motion1x": {"met": true, "sessions": ["May 25"]},
+    "caviteCity1x": {"met": true, "sessions": ["May 29"]},
+    "max1PerDay": {"met": true},
+    "compTrainingTotal": "4/4"
+  },
+  "jetlagProtocol": {
+    "direction": "San Diego -> Manila (westward delay)",
+    "shiftNeededHours": 9,
+    "preFlightRampDays": 5,
+    "postArrivalDays": 8,
+    "sleepProfile": {
+      "bedtime": "1:00am local",
+      "wakeTime": "10:00am local",
+      "sleepHours": 9
+    },
+    "seekLight": "7:00am-1:00pm local",
+    "avoidLight": "1:00am-7:00am local",
+    "meals": {
+      "breakfast": "10:30-11:00am",
+      "lunch": "12:00-1:00pm",
+      "dinner": "10:30pm"
+    },
+    "melatonin": "0.5-1mg at 1:00am lights-out",
+    "protocolComplete": "May 21",
+    "nonMeetingNightAdjustments": "Bed 1hr earlier, dinner 2hrs earlier"
+  },
+  "deviations": [
+    {"date": "May 14", "item": "Dinner", "protocol": "10:30pm", "actual": "9:30pm", "deviation": "1hr early", "severity": "yellow"},
+    {"date": "May 15", "item": "Dinner", "protocol": "10:30pm", "actual": "8:30pm", "deviation": "2hr early", "severity": "red"},
+    {"date": "May 15", "item": "Bed", "protocol": "1:00am", "actual": "12:00am", "deviation": "1hr early", "severity": "yellow"},
+    {"date": "May 16", "item": "Wake", "protocol": "10:00am", "actual": "9:00am", "deviation": "1hr early", "severity": "yellow"},
+    {"date": "May 16", "item": "Breakfast", "protocol": "10:30am", "actual": "9:30am", "deviation": "1hr early", "severity": "yellow"},
+    {"date": "May 16", "item": "Dinner", "protocol": "10:30pm", "actual": "8:30pm", "deviation": "2hr early", "severity": "red"},
+    {"date": "May 16", "item": "Bed", "protocol": "1:00am", "actual": "12:00am", "deviation": "1hr early", "severity": "yellow"},
+    {"date": "May 17", "item": "Wake", "protocol": "10:00am", "actual": "9:00am", "deviation": "1hr early", "severity": "yellow"},
+    {"date": "May 17", "item": "Breakfast", "protocol": "10:30am", "actual": "9:30am", "deviation": "1hr early", "severity": "yellow"},
+    {"date": "May 17", "item": "Dinner", "protocol": "10:30pm", "actual": "8:30pm", "deviation": "2hr early", "severity": "red"},
+    {"date": "May 17", "item": "Bed", "protocol": "1:00am", "actual": "12:30am", "deviation": "30min early", "severity": "yellow"},
+    {"date": "May 18", "item": "Wake", "protocol": "10:00am", "actual": "9:30am", "deviation": "30min early", "severity": "yellow"},
+    {"date": "May 18", "item": "Breakfast", "protocol": "10:30am", "actual": "9:45am", "deviation": "45min early", "severity": "yellow"},
+    {"date": "May 18", "item": "Bed", "protocol": "1:00am", "actual": "12:00am", "deviation": "1hr early", "severity": "yellow"},
+    {"date": "May 19", "item": "Dinner", "protocol": "10:30pm", "actual": "9:00pm", "deviation": "1.5hr early", "severity": "red"},
+    {"date": "May 20", "item": "Wake", "protocol": "10:00am", "actual": "9:00am", "deviation": "1hr early", "severity": "yellow"},
+    {"date": "May 20", "item": "Breakfast", "protocol": "10:30am", "actual": "9:30am", "deviation": "1hr early", "severity": "yellow"},
+    {"date": "May 20", "item": "Bed", "protocol": "1:00am", "actual": "12:00am", "deviation": "1hr early", "severity": "yellow"},
+    {"date": "May 21", "item": "Dinner", "protocol": "10:30pm", "actual": "8:45pm", "deviation": "1hr 45min early", "severity": "red"}
+  ],
+  "travelTimeConstants": {
+    "naicToMnlAirport": "2.5-3 hours by car",
+    "naicToImus": {
+      "bus": "2.5 hours (1.5 hrs late night)",
+      "drive": "1.5 hours",
+      "scooter": "1 hour"
+    },
+    "naicToCaviteCity": "Same as Imus",
+    "makatiToNaic": "3 hours",
+    "boholTownToBoholBjj": {
+      "bus": "1.5 hours",
+      "car": "45 minutes"
+    },
+    "boholAirportToTown": "1 hour (exit 40min + tuk tuk 25min)",
+    "shanghaiCityToAirport": "1 hour"
+  },
+  "airportRules": {
+    "domestic": "1.5 hours early",
+    "international": "3 hours early"
+  },
+  "restaurantClosingTimes": {
+    "bohol": "10pm (one late-night schwarma shop open 10:45pm)",
+    "elNido": "9pm (must be seated by 8:45pm)"
+  },
+  "removedDestinations": {
+    "coron": "Removed. Originally 2 nights with FCP BJJ and Montenegro Ferry from El Nido. Replaced with extra El Nido night + direct ENI->MPH->MNL flight May 24.",
+    "osakaForJavin": "Replaced by Shanghai. Cody goes to Osaka solo after Shanghai via 9C6581 PVG->KIX Jun 10."
+  }
+}

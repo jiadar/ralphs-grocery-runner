@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "slack-agenda"
+version = "0.1.0"
+description = "Fetch Slack conversations and generate meeting agendas with Claude"
+authors = []
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+slack-sdk = ">=3.27.0"
+anthropic = ">=0.40.0"
+python-dotenv = ">=1.0.0"
+
+[tool.poetry.scripts]
+slack-agenda = "slack_agenda:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry-core.masonry.api"

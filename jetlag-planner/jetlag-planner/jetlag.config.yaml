@@ -1,0 +1,54 @@
+# ─── Jet Lag Planner — Personal Configuration ────────────────────────────────
+# Edit this file to set your defaults. Restart the dev server after changes.
+
+# ── Sleep profile ─────────────────────────────────────────────────────────────
+sleep:
+  wake_home: "07:00"          # Your usual wake time at home (San Diego)
+  wake_dest: "10:00"          # Your target wake time at destination
+  bedtime: "10:00"            # Your usual bedtime at home (used for pre-flight ramp reference)
+  duration_hours: 8.5           # Hours of actual sleep you need (not time in bed)
+  wind_down_minutes: 30       # Time in bed before you fall asleep (wind-down buffer)
+
+# ── Trip defaults ─────────────────────────────────────────────────────────────
+trip:
+  direction: "outbound"       # "outbound" (SD → Asia) or "return" (Asia → SD)
+  destination: "manila"       # "manila" or "sumatra"
+  pre_flight_ramp_days: 5     # Days of active clock shifting (3–7), used for before or after
+  outbound_protocol_timing: "before"  # "before" = shift at home pre-flight, "after" = shift at dest post-arrival
+  return_protocol_timing: "after"     # "before" = shift at dest pre-flight, "after" = shift at home post-arrival
+
+# ── Default outbound flight itinerary ─────────────────────────────────────────
+outbound_legs:
+  - from: "LAX"
+    dep_date: "2026-05-13"
+    dep_time: "12:20"
+    to: "MNL"
+    arr_date: "2026-05-14"
+    arr_time: "18:00"
+
+# ── Default return flight itinerary ───────────────────────────────────────────
+return_legs:
+  - from: "MNL"
+    dep_date: ""              # Fill in when planning return
+    dep_time: "08:00"
+    to: "LAX"
+    arr_date: ""
+    arr_time: "10:30"
+
+# ── Departure day logistics ───────────────────────────────────────────────────
+departure:
+  use_hotel: true             # true = stay at airport hotel night before
+  hotel_checkin: "23:00"      # Time you arrive at the hotel
+  hotel_wake: "08:00"         # Wake time at hotel on departure morning
+  home_wake: "05:45"          # If not using hotel: wake time at home
+  leave_home: "06:20"         # If not using hotel: time you leave the house
+  airport_arrival: "09:20"    # If not using hotel: time you arrive at airport
+
+# ── Recurring meetings (attended remotely from destination) ───────────────────
+# days: Mon=1, Tue=2, Wed=3, Thu=4, Fri=5, Sat=6, Sun=0
+# times are in PDT (San Diego time)
+meetings:
+  - label: "Meetings"
+    days: [1, 3]              # Monday & Wednesday
+    start: "07:00"            # 7:00 AM PDT
+    end: "09:00"              # 9:00 AM PDT
